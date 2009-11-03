@@ -24,4 +24,3 @@ I should be able to add comments
     Then I should not see "Successfully created"
     And I should see "Johnny"
     And I should see "Javascript comment"
-    And I should see "added with javascript"

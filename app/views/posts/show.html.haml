@@ -1,0 +1,8 @@
+= render :partial => "post", :object => @post
+
+= link_to "Edit", edit_post_path(@post)
+
+= render :partial => "comments/new"
+
+%ol#comments
+  = render :partial => "comment", :collection => @post.comments

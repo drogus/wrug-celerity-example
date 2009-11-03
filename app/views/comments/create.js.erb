@@ -1,0 +1,4 @@
+var comment = $(<%= js render(:partial => "posts/comment", :object => @object) %>).hide();
+$.scrollTo("#comments li:last", {duration: 1000});
+$("#comments").append(comment);
+$("#<%= dom_id(@object) %>").show("slow", function() {$(this).css("display", "list-item")});

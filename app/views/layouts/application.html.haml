@@ -1,0 +1,15 @@
+!!! Strict
+%html
+  %head
+    = stylesheet_link_tag "formtastic", "formtastic_changes", "style"
+    = javascript_include_tag "jquery", "jquery.scrollTo", "application"
+  %body
+    #header
+      %h1= link_to "My shiny weblog", '/'
+    #flash
+      - flash.each do |type, message|
+        %div{ :class => "flash #{type}" }
+          =h message
+    #article
+      = yield
+    #footer

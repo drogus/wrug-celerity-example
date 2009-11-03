@@ -1,0 +1,4 @@
+%h2= "Edit #{h @post.title}"
+
+- semantic_form_for @post do |form|
+  = render :partial => "form", :object => form

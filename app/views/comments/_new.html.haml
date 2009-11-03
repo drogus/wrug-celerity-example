@@ -1,0 +1,10 @@
+#add_comment
+  %h3 New comment
+  - semantic_form_for [@post, @comment || Comment.new], :html => {:class => "ajax spin"} do |form|
+    - form.inputs do
+      = form.input :name
+      = form.input :body, :as => :text
+    - form.buttons do
+      = form.commit_button
+
+

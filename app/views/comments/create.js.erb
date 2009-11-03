@@ -1,4 +1,6 @@
+$("form textarea, form input[type=text]").val("");
+$("body").append("added with javascript");
 var comment = $(<%= js render(:partial => "posts/comment", :object => @object) %>).hide();
 $.scrollTo("#comments li:last", {duration: 1000});
-$("#comments").append(comment);
+$("#comments").append(comment)
 $("#<%= dom_id(@object) %>").show("slow", function() {$(this).css("display", "list-item")});

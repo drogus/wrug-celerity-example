@@ -10,6 +10,8 @@ module NavigationHelpers
     
     when /the home\s?page/
       '/'
+    when /"([^"]+)" posts' page/
+      post_path(Post.find_by_title($1))
     
     # Add more mappings here.
     # Here is a more fancy example:

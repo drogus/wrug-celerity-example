@@ -37,4 +37,6 @@ require 'cucumber'
 require 'cucumber/formatter/unicode'
 require 'cucumber/webrat/element_locator' # Lets you do table.diff!(element_at('#my_table_or_dl_or_ul_or_ol').to_table)
 require 'cucumber/rails/rspec'
+require Rails.root.join("features/factories")
 
+require 'culerity'
